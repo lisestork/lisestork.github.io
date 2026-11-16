@@ -32,7 +32,7 @@ nav,
 h1, h2,
 .pub-year-heading,
 .news-date,
-.blog-entry-meta,
+.post-entry-meta,
 .post-meta,
 .profile-links,
 .see-all,
@@ -43,7 +43,7 @@ a.doi,
 .trajectory-dates,
 .talk-meta,
 .pub-tag,
-.blog-tag,
+.post-tag,
 .traj-sub,
 footer {
   font-family: var(--font-mono);
@@ -490,32 +490,32 @@ footer p {
   text-align: right;
 }
 
-/* ── Blog: listing ───────────────────────── */
+/* ── Posts: listing ──────────────────────── */
 
-.blog-list {
+.post-list {
   display: flex;
   flex-direction: column;
   gap: 32px;
 }
 
-.blog-entry h3 {
+.post-entry h3 {
   font-size: 1.05rem;
   font-weight: 600;
   margin-bottom: 3px;
 }
 
-.blog-entry h3 a { color: var(--text); }
-.blog-entry h3 a:hover { color: var(--accent); text-decoration: none; }
+.post-entry h3 a { color: var(--text); }
+.post-entry h3 a:hover { color: var(--accent); text-decoration: none; }
 
-.blog-entry-meta {
+.post-entry-meta {
   font-size: 0.8rem;
   color: var(--muted);
   margin-bottom: 6px;
 }
 
-.blog-entry p { font-size: 0.925rem; }
+.post-entry p { font-size: 0.925rem; }
 
-.blog-tag {
+.post-tag {
   display: inline-block;
   background: #f2f2f2;
   color: var(--muted);
@@ -531,7 +531,7 @@ footer p {
   font-style: italic;
 }
 
-/* ── Blog: post page ─────────────────────── */
+/* ── Posts: post page ────────────────────── */
 
 .post-header { padding: 40px 0 28px; }
 

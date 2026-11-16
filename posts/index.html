@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Posts & News — Lise Stork">
+  <title>Posts &amp; News · Lise Stork</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="nav-name" href="../index.html">Lise Stork</a>
+    <ul class="nav-links">
+      <li><a href="../research/index.html">Research</a></li>
+      <li><a href="../posts/index.html" class="active">Posts &amp; News</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="wrap">
+
+  <div class="profile" style="padding-bottom: 8px;">
+    <div class="profile-info">
+      <h1 style="font-size:1.35rem;">Posts &amp; News</h1>
+    </div>
+  </div>
+
+  <main>
+    <section style="border-top: none; padding-top: 0;">
+      <div class="post-list" id="post-list"></div>
+    </section>
+  </main>
+</div>
+
+<footer>
+  <div class="wrap">
+    <p>Lise Stork · University of Amsterdam ·
+      <a class="email-link" href="#" data-u="l.stork" data-d="uva.nl">l.stork [at] uva.nl</a>
+    </p>
+  </div>
+</footer>
+
+<script>
+  document.querySelectorAll('.email-link').forEach(function(el) {
+    var addr = el.dataset.u + '@' + el.dataset.d;
+    el.href = 'mailto:' + addr;
+    el.textContent = addr;
+  });
+</script>
+<script src="../posts.js"></script>
+<script>
+  (function () {
+    var base = '../';
+    var sorted = POSTS.slice().sort(function (a, b) { return b.sort > a.sort ? 1 : -1; });
+    document.getElementById('post-list').innerHTML = sorted.map(function (item) {
+      var titleHtml = item.url
+        ? '<a href="' + base + item.url + '">' + (item.title || '') + '</a>'
+        : (item.titleHtml || item.title || '');
+      var tagSpans = item.tags.map(function (t) {
+        return '<span class="post-tag">' + t + '</span>';
+      }).join(' ');
+      var meta = item.date + ' &nbsp;·&nbsp; ' + tagSpans;
+      if (item.byline) meta += ' &nbsp;·&nbsp; ' + item.byline;
+      if (item.slides) meta += ' &nbsp;·&nbsp; <a href="' + base + item.slides + '">slides ↓</a>';
+      return '<div class="post-entry"><h3>' + titleHtml + '</h3>'
+        + '<p class="post-entry-meta">' + meta + '</p>'
+        + (item.description ? '<p>' + item.description + '</p>' : '')
+        + '</div>';
+    }).join('');
+  })();
+</script>
+
+</body>
+</html>

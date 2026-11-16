@@ -14,7 +14,7 @@
     <a class="nav-name" href="index.html">Lise Stork</a>
     <ul class="nav-links">
       <li><a href="research/index.html">Research</a></li>
-      <li><a href="blog/index.html">Posts &amp; News</a></li>
+      <li><a href="posts/index.html">Posts &amp; News</a></li>
     </ul>
   </div>
 </nav>
@@ -94,21 +94,8 @@
     <aside class="page-sidebar">
       <section id="news">
         <h2>Posts &amp; News</h2>
-        <div class="news-list">
-          <div class="news-item">
-            <span class="news-date">5 Nov 2026</span>
-            <span><a href="blog/posts/dharc-2026.html">DH.arc Seminar: Hybrid Intelligence for the Digital Humanities</a> <span class="blog-tag">post</span></span>
-          </div>
-          <div class="news-item">
-            <span class="news-date">Oct 2026</span>
-            <span><a href="blog/posts/iswc-2026.html">ISWC 2026 Trip Report</a> <span class="blog-tag">post</span></span>
-          </div>
-          <div class="news-item">
-            <span class="news-date">26 Oct 2026</span>
-            <span>Co-organized <a href="https://sci-k.github.io/2026/">Sci-K workshop</a> at ISWC 2026, Bari</span>
-          </div>
-        </div>
-        <p class="see-all"><a href="blog/index.html">all posts &amp; news →</a></p>
+        <div class="news-list" id="news-list"></div>
+        <p class="see-all"><a href="posts/index.html">all posts &amp; news →</a></p>
       </section>
     </aside>
 
@@ -271,6 +258,21 @@
     el.href = 'mailto:' + addr;
     el.textContent = addr;
   });
+</script>
+<script src="posts.js"></script>
+<script>
+  (function () {
+    var sorted = POSTS.slice().sort(function (a, b) { return b.sort > a.sort ? 1 : -1; });
+    document.getElementById('news-list').innerHTML = sorted.slice(0, 3).map(function (item) {
+      var titleHtml = item.url
+        ? '<a href="' + item.url + '">' + (item.title || '') + '</a>'
+        : (item.titleHtml || item.title || '');
+      var tagHtml = item.url && item.tags.length
+        ? ' <span class="post-tag">' + item.tags[0] + '</span>' : '';
+      return '<div class="news-item"><span class="news-date">' + item.date + '</span>'
+        + '<span>' + titleHtml + tagHtml + '</span></div>';
+    }).join('');
+  })();
 </script>
 
 </body>
