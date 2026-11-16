@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="ISWC 2026 Trip Report — Lise Stork">
+  <title>ISWC 2026 Trip Report · Lise Stork</title>
+  <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="nav-name" href="../../index.html">Lise Stork</a>
+    <ul class="nav-links">
+      <li><a href="../../research/index.html">Research</a></li>
+      <li><a href="../../blog/index.html" class="active">Posts &amp; News</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="wrap">
+
+  <div class="post-header">
+    <h1>ISWC 2026 Trip Report</h1>
+    <p class="post-meta">October 2026 &nbsp;·&nbsp; <span class="blog-tag">trip report</span></p>
+  </div>
+
+  <div class="post-body">
+
+    <p>Between the 25th and 29th of October 2026, the 25th edition of ISWC took place. 
+      The first two days were workshop days, and since 2024, ISWC has introduced Dagstuhl-like workshops. I really enjoy these workshops, as it brings together a group of people for deep discussions on emerging topics or ongoing challenges in the field. This year, I attended the <a href="https://dhlab-nl.github.io/charged-workshop/">CHARGED workshop</a>, which focused on challenges of multimodal data
+    in cultural heritage, and fidelity: loss of information with digitisation. We also discussed concept drift, a topic that I
+    find very interesting due to its complex nature in combination with the use of
+    ontologies, as concepts change over time. For instance, occupations shift in meaning over time, or systems for determining geolocation. Additionally, we discussed uncertainty: a lot of information is lost in historical sources, how can we still best represent them given this missing knowledge?</p>
+
+    <p>On the second day, the <a href="https://sci-k.github.io/2026/">Sci-K
+    workshop</a> (which is now in its sixth edition) that I co-organised took place. Silvio Peroni gave a great keynote,
+    advocating for sustainability plans for open scholarly infrastructures, that are under
+    pressure from funding cuts and geopolitical instability. In terms of submissions, we
+    saw returning topics such as tools for documenting ontologies and representing scholarly
+    discourse more richly (LODE, SUDO), and LLM-based extraction pipelines for scientific
+    metadata. This year, we also had two papers discussing how invalidations/retractions
+    should be handled in scholarly knowledge graphs. From the submissions and discussions
+    during the workshops, I think a broader question is one about the forms
+    scientific knowledge should be communicated in, now that LLMs generate, extract, and
+    consume scholarly knowledge at scale. Should papers combine human-readable text with
+    machine-readable structured data (e.g., [<a href="#ref1">1</a>]), ideally with data
+    and interactive visualisations, or should they perhaps be published as interactive systems
+    (e.g., [<a href="#ref2">2</a>])?</p>
+
+    <p>The main conference opened on Tuesday with Frank van Harmelen's keynote "It was
+    never about the Web: rethinking semantics at 25". Frank first celebrated what the
+    Semantic Web succeeded at over the last 25 years: data integration, knowledge graphs
+    in biotech, and interoperability, so <em>semantics</em>! But, the talk could not all
+    be celebratory: he argued that the vision of the intelligent web agents, and mostly
+    the 'Web' part, did not materialise. He talked about Robert Dijkgraaf's "curse of
+    applicability", and how that hit our community as well: it became so good at building
+    useful things, perhaps spending less attention to the fundamental questions. Therefore,
+    Frank discussed the scientific lessons we've learnt over the last 25 years: (1) graphs
+    are the natural forms of information, and (2) a little semantics goes a long way. The
+    second part of his keynote looked forward, arguing for rethinking semantics. Rather
+    than negotiating meaning before the problem-solving process, between a knowledge
+    engineer and a domain expert, why not involve a problem-solving agent as an active
+    participant in the meaning-negotiation process? So, instead of knowledge engineering
+    as a separate activity that is decoupled from the problem-solving process, Frank
+    suggests a shift towards knowledge engineering as an ongoing, interactive meaning
+    negotiation process between domain experts, knowledge engineers, and AI agents, that
+    is driven by the needs of downstream problem-solving tasks. What I like about this
+    vision is that it might help address some of the difficulties we face when publishing
+    static knowledge artifacts, given the dynamic nature of knowledge. If meaning
+    negotiation becomes an ongoing, interactive process, changes, errors, and differences
+    in conceptualisations across disciplines could be identified and addressed as they
+    arise during problem solving, rather than requiring separate knowledge management
+    activities (and it relates a little to [<a href="#ref2">2</a>] again).</p>
+
+    <p>In the afternoon, Jim Hendler's keynote revisited the original 2001 Semantic Web
+    vision, evaluated what had actually been achieved over the past 25 years, and argued
+    for recovering that vision using today's technologies, particularly LLMs and AI agents.
+    His keynote ended with a sketch about the industry rediscovering the Semantic Web in
+    venture capital language (with 'Global Data Handles' (URIs), and 'Enterprise Data
+    Intelligence Mesh' (a KG)), starring Juan Sequeda as "Chad Stack". The keynote was
+    followed by a panel with questions from early career researchers and the audience,
+    about trust erosion and self-reinforcing biases and errors with LLM-built KGs;
+    questions about the role of humans in knowledge generation (essential, I think, since
+    knowledge is grounded in a reality that keeps changing); and accountability in public
+    knowledge infrastructure.</p>
+
+    <p>I greatly appreciated the visionary track, and (even though I understand it would
+    perhaps be too often), wouldn't mind seeing it back every year. This year, the talks
+    I saw were
+    '<a href="https://link.springer.com/chapter/10.1007/978-3-032-42029-9_26">unrethinking
+    the semantic web</a>', which argued that after 25 years, the point is not to rethink
+    the semantic web, but to reclaim it, given the state of current technologies. A
+    <a href="https://link.springer.com/chapter/10.1007/978-3-032-42029-9_25">second
+    vision paper</a> argued for work on brain-computer interfaces that make human
+    knowledge stored in the brain interoperable with knowledge on the Web (raising as many
+    ethical questions as technical ones). Lastly, a paper about going from a
+    <a href="https://link.springer.com/chapter/10.1007/978-3-032-42029-9_27">Web of
+    documents to a Web of claims</a> argues that the web has moved from documents to data,
+    and the next layer is claims: the Semantic Web community solved the representation
+    problem, but the infrastructure was never populated at scale. Generative AI makes
+    population cheaper, but throws away the claims every run. However, as we saw from
+    Silvio Peroni's keynote during the Sci-K workshop, the infrastructure to store and
+    accumulate claims already partially exists (the Open Research Knowledge Graph,
+    OpenAIRE, and others) but we still lack good ways to populate it at scale.</p>
+
+    <p>Lastly, kudos to the organisers Valentina Tamma and Claudio D'Amato and all the
+    others; both the scientific program as well as the social program were great.</p>
+
+    To close, some papers that I found interesting from this year's ISWC: 
+    <ul>
+      <li><a href="https://link.springer.com/chapter/10.1007/978-3-032-42029-9_22">A
+      system that uses AI to propose requirements, and lets humans evaluate them.</a>
+      I am very interested in the roles that AI and humans should take in such workflows.
+      I wonder if we can do better in terms of collaboration?</li>
+      <li><a href="https://link.springer.com/chapter/10.1007/978-3-032-42026-8_33">Best
+      research paper winner.</a></li>
+      <li><a href="https://link.springer.com/chapter/10.1007/978-3-032-42029-9_8">A
+      benchmark we need</a> — as we need to do better in terms of evaluation.</li>
+      <li><a href="https://link.springer.com/chapter/10.1007/978-3-032-42029-9_15">A
+      system that helps researchers represent what they should do in their workflows</a>,
+      and whether the actual experiments follow that same plan. The system looks very well
+      developed; curious to try it out. Apparently it was very hard to validate/co-develop
+      this with actual experts!</li>
+    </ul>
+
+    <h2>References</h2>
+
+    <ol>
+      <li id="ref1">Beek, W., Mourits, R., and Rijpma, A. "FAIR Paper: Applying FAIR to
+      Academic Publishing." <em>CEUR Workshop Proceedings</em>, Vol. 3724. CEUR WS, 2024.</li>
+      <li id="ref2">Miao, J., Davis, J.R., Zhang, Y. et al. Reimagining research papers
+      as interactive and reliable AI agents. <em>Nature</em> <strong>658</strong>,
+      1272–1280 (2026).
+      <a href="https://doi.org/10.1038/s41586-026-11044-y">https://doi.org/10.1038/s41586-026-11044-y</a></li>
+    </ol>
+
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <p>Lise Stork · University of Amsterdam ·
+      <a class="email-link" href="#" data-u="l.stork" data-d="uva.nl">l.stork [at] uva.nl</a>
+    </p>
+  </div>
+</footer>
+
+<script>
+  document.querySelectorAll('.email-link').forEach(function(el) {
+    var addr = el.dataset.u + '@' + el.dataset.d;
+    el.href = 'mailto:' + addr;
+    el.textContent = addr;
+  });
+</script>
+
+</body>
+</html>
