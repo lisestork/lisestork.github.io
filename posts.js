@@ -35,9 +35,9 @@ const POSTS = [
   {
     date: "Oct 2026",
     sort: "2026-10-25",
-    titleHtml: 'Paper published at ODPA@ISWC 2026: <a href="https://odpa.github.io/workshop-on-ontology-design-and-patterns/2026/#schedule">Fit for Purpose: Selecting a Reification Method for the TIDO Ontology</a>',
+    titleHtml: 'Paper published at WOP@ISWC 2026: <a href="https://odpa.github.io/workshop-on-ontology-design-and-patterns/2026/#schedule">Fit for Purpose: Selecting a Reification Method for the TIDO Ontology</a>',
     url: null,
-    tags: ["short paper"],
+    tags: ["paper"],
     slides: null,
     description: null,
     byline: "Roothaert, Stork, Poveda-Villalón"
@@ -47,7 +47,7 @@ const POSTS = [
     sort: "2026-09-15",
     titleHtml: 'Paper published at SEMANTiCS 2026: <a href="https://ceur-ws.org/Vol-4293/">Bridging Theory and Practice in Semantic Data Science</a>',
     url: null,
-    tags: ["poster"],
+    tags: ["short paper", "poster"],
     slides: null,
     description: null,
     byline: "Orlov, Stork, Yakovets, Miedema"
@@ -67,7 +67,7 @@ const POSTS = [
     sort: "2026-05-28",
     titleHtml: 'Paper published at QKG@ESWC 2026: <a href="https://ceur-ws.org/Vol-4205/paper7.pdf">Ranking-Guided Autoregressive Modeling for Multimodal Tabular Anomaly Detection</a>',
     url: null,
-    tags: ["short paper"],
+    tags: ["paper"],
     slides: null,
     description: null,
     byline: "Georgakopoulos, Groth, Stork"
@@ -117,7 +117,7 @@ const POSTS = [
     sort: "2025-05-01",
     titleHtml: 'Paper published at K-CAP 2025: <a href="https://doi.org/10.1145/3731443.3771351">TIDO: The Threat Intelligence Decision Ontology</a>',
     url: null,
-    tags: ["short paper"],
+    tags: ["paper"],
     slides: null,
     description: null,
     byline: "Roothaert, Schlobach, Massacci, Stork"
